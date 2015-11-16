@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-configuration PUBLIC 
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
+<hibernate-configuration>
+    <session-factory>
+    
+        <!-- Settings for a local HSQL (testing) database. -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+    	<property name="hibernate.connection.datasource">java:comp/env/jdbc/heredb</property>
+    
+        <!-- Print SQL to stdout. -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Hibernate XML mapping files -->
+        <mapping resource="com/imhere/restapi/Response.hbm.xml"/>
+
+    </session-factory>
+
+</hibernate-configuration>

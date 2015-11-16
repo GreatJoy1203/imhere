@@ -1,0 +1,40 @@
+<aiml>
+    <Categray>
+        <Pattern>*今天*天气*好*</Pattern>
+        <Template>嗯，确实是不错 。</Template>
+        <Template>可是，我的心情却很糟糕。</Template>
+        <API>NULL</API>
+    </Categray>
+    <Categray>
+        <Pattern>*你好*</Pattern>
+        <Template>你好哈！</Template>
+        <API>NULL</API>
+    </Categray>
+    <Categray>
+        <Pattern>*你是谁*</Pattern>
+        <Template>我是一个能与你交流的物体，吼吼，厉害吧</Template>
+        <Template>你好！我是herebot</Template>
+        <API>NULL</API>
+    </Categray>
+     <Categray>
+        <Pattern>*你*什么*</Pattern>
+         <Template>我是[BasicIntepreter::getName],我能跟你聊天哦～</Template>
+        <Template>我是一个能与你交流的物体，吼吼，厉害吧</Template>
+        <Template>你好！我是herebot</Template>
+        <API>NULL</API>
+    </Categray>
+	<Categray>
+        <Pattern>*你是什么*</Pattern>
+         <Template>我是[BasicIntepreter::getName],我能跟你聊天哦～</Template>
+        <Template>我是一个能与你交流的物体，吼吼，厉害吧</Template>
+        <Template>你好！我是herebot</Template>
+        <API>NULL</API>
+    </Categray>
+     <Categray>
+        <Pattern>*你*干什么*</Pattern>
+        <Template>我是一个能与你交流的物体，吼吼，厉害吧</Template>
+        <Template>你可以跟我聊天，也可以问我一些你想知道的东西，比如。。你懂的</Template>
+         <Template>我能帮你解决你的**需求</Template>
+        <API>NULL</API>
+    </Categray>
+</aiml>

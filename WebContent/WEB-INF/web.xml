@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>imhere</display-name>
+  <servlet>
+  <servlet-name>ImHere REST Service</servlet-name>
+<servlet-class>
+  com.sun.jersey.spi.container.servlet.ServletContainer
+</servlet-class>
+  <init-param>
+    <param-name>com.sun.jersey.config.property.packages</param-name>
+    <param-value>com.imhere.restapi</param-value>
+  </init-param>
+  <load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ImHere REST Service</servlet-name>
+  <url-pattern>/imhere/*</url-pattern>
+</servlet-mapping>  
+<listener>
+    <listener-class>com.imhere.restapi.HibernateListener</listener-class>
+</listener>
+<listener>
+    <listener-class>com.imhere.restapi.IntelBotListener</listener-class>
+</listener>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+<resource-ref>  
+    <description>DB Connection</description>  
+    <res-ref-name>jdbc/heredb</res-ref-name>  
+    <res-type>javax.sql.DataSource</res-type>  
+    <res-auth>Container</res-auth>  
+</resource-ref> 
+</web-app>
